@@ -23,10 +23,25 @@ export const Container = styled.div`
     > div {
         display: flex;
         align-items: center;
+        
+        div {
+            display: flex;
+            flex-direction: column;
+            margin-right: 9px;
+            text-align: right;
+            width: 100px;
 
-        span {
-            color: ${({ theme }) => theme.COLORS.WHITE} 
-        }
+            p {
+            color: ${({ theme }) => theme.COLORS.WHITE};
+            font-size: 14px;
+            }
+
+            a {
+                text-decoration: none;
+                color: ${({ theme }) => theme.COLORS.GRAY_300};
+                font-size: 14px;
+            }
+        }        
 
         img {
         height: 64px;

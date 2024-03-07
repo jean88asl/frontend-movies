@@ -9,7 +9,11 @@ export function Header() {
             <Input />
 
             <div>
-                <span>Jean Augusto</span>
+                <div>
+                    <p>Jean Augusto</p>
+                    <a href="/">sair</a>   
+                </div>
+
                 <img src="https://github.com/jean88asl.png" alt="imagem do usuário" />
             </div>
         </Container>    

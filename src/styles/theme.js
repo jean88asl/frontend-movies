@@ -9,6 +9,5 @@ export default {
 
         PINK: "#FF859B",
         WHITE: "#FFFFFF",
-
     }
 }
