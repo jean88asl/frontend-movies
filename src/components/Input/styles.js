@@ -5,6 +5,7 @@ export const Container = styled.div`
 
     > input {
         width: 100%;
+        font-size: 14px;
 
         margin: 0 64px;
         padding: 19px 24px;

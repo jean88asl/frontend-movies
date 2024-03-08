@@ -1,32 +1,36 @@
 import { styled } from "styled-components"
 
-export const Container = styled.div`
+export const Container = styled.header`
+    grid-area: header;
+
     height: 116px;    
     background-color: ${({ theme }) => theme.COLORS.GRAY_900};
 
     padding: 24px 123px;
-    margin-bottom: 40px;
 
     display: flex;
-    align-items: center;
     justify-content: space-between;
 
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: ${({ theme }) => theme.COLORS.GRAY_300};
+`
+export const Profile = styled.div`
+    display: flex;
+    width: 100%;
 
-    > h1 {
+    h1 {
         font-size: 24px;
         color: ${({ theme }) => theme.COLORS.PINK};
     }
 
-    > div {
+    div {
         display: flex;
         align-items: center;
+        justify-content: flex-end;
         
         div {
-            display: flex;
-            flex-direction: column;
+            display: inline-block;
             margin-right: 9px;
             text-align: right;
             width: 100px;
@@ -44,10 +48,10 @@ export const Container = styled.div`
         }        
 
         img {
-        height: 64px;
-        width: 64px;
+            height: 64px;
+            width: 64px;
 
-        border-radius: 50%;
+            border-radius: 50%;
         }
     }
 ` 
