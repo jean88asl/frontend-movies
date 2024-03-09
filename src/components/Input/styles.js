@@ -2,22 +2,32 @@ import { styled } from "styled-components"
 
 export const Container = styled.div`
     width: 100%;
-
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    
+    background-color: ${({ theme }) => theme.COLORS.GRAY_400};
+    border-radius: 10px;
+    
     > input {
+        height: 56px;
         width: 100%;
         font-size: 14px;
 
-        margin: 0 64px;
-        padding: 19px 24px;
-        background-color: #262529;
-        
+        padding: 12px;
+        background-color: transparent;
 
         border: none;
-        border-radius: 10px;
-        color: #948F99;
+        color: ${({ theme }) => theme.COLORS.GRAY_300};
 
         &::placeholder {
-            color: #948F99;
+            color: ${({ theme }) => theme.COLORS.GRAY_300};
         }
-    } 
+
+    }
+
+    svg {
+        font-size: 18px;
+        margin-left: 8px;
+    }
 ` 

@@ -1,12 +1,13 @@
+/* eslint-disable react/prop-types */
 import { Container } from "./styles";
 
-export function Input(title) {
+export function Input({ icon:Icon, ...rest }) {
     return(
         <Container>
-            <input 
-               title={title}  
-               placeholder="Pesquisar pelo titulo" 
-            />
+            {Icon && <Icon />}  
+            <input {...rest}/
+            
+            >
         </Container>    
     )
 }

@@ -5,15 +5,15 @@ import { Header } from "../../components/Header"
 import { Button } from "../../components/Button"
 import { InfoNote } from "../../components/InfoNote"
 
-export function Details() {
+export function Home() {
   return (
     <Container>
       <Header />    
 
       <Menu>
-        <h2>Meu filmes</h2>  
+        <h2>Filmes assistidos</h2>  
         <Button 
-            title="Adicionar filmes"
+            title="Adicionar filme"
             icon={RiAddFill}
             >
         </Button>           

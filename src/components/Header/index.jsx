@@ -7,7 +7,9 @@ export function Header() {
             <Profile>
                 <h1>MoviesNotes</h1>
 
-                <Input />
+                <Input
+                    placeholder="Pesquise pelo titulo" 
+                />
 
                 <div>
                     <div>
