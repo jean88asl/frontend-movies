@@ -1,16 +1,20 @@
-import { Container, Profile } from "./styles";
-import { Input } from "../Input";
+import { Container, Profile, Logo, Search } from "./styles";
 
 export function Header() {
     return (
         <Container>
-            <Profile>
+            <div>
+            <Logo>
                 <h1>MoviesNotes</h1>
+            </Logo>
 
-                <Input
-                    placeholder="Pesquise pelo titulo" 
+            <Search>
+                <input
+                   placeholder="Pesquise pelo titulo" 
                 />
+             </Search>
 
+             <Profile>
                 <div>
                     <div>
                         <p>Jean Augusto</p>
@@ -20,6 +24,7 @@ export function Header() {
                     <img src="https://github.com/jean88asl.png" alt="imagem do usuário" />
                 </div>
             </Profile>
+            </div>
         </Container>
     )
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { Perfil } from './pages/Perfil'
+import { MoviePreview } from './pages/MoviePreview'
 import GlobalStyle from './styles/globals'
 import { ThemeProvider } from "styled-components"
 
@@ -10,7 +10,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Perfil />
+      <MoviePreview />
     </ThemeProvider>
   </React.StrictMode>,
 )

@@ -2,19 +2,50 @@ import { styled } from "styled-components"
 
 export const Container = styled.header`
     grid-area: header;
+    width: 100%;
 
-    height: 116px;    
     background-color: ${({ theme }) => theme.COLORS.GRAY_900};
-
-    padding: 24px 123px;
-
-    display: flex;
-    justify-content: space-between;
-
+    
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: ${({ theme }) => theme.COLORS.GRAY_300};
+
+    > div {
+        margin: 30px 123px;
+        display: grid;
+        grid-template-columns: max-content auto max-content; 
+        align-items: center;
+    }
 `
+
+export const Logo = styled.div`
+    > h1 {
+        color: ${({ theme }) => theme.COLORS.PINK};
+    }
+`
+
+export const Search = styled.div`
+    margin: 0 64px;
+
+    > input {
+        height: 56px;
+        width: 100%;
+        font-size: 14px;
+
+        padding: 12px;
+        background-color: ${({ theme }) => theme.COLORS.GRAY_400};
+
+        border: none;
+        border-radius: 10px;
+        color: ${({ theme }) => theme.COLORS.GRAY_300};
+
+        &::placeholder {
+            color: ${({ theme }) => theme.COLORS.GRAY_300};
+        }
+    }
+
+`
+
 export const Profile = styled.div`
     display: flex;
     width: 100%;
@@ -27,7 +58,7 @@ export const Profile = styled.div`
     div {
         display: flex;
         align-items: center;
-        justify-content: flex-end;
+        /* justify-content: flex-end; */
         
         div {
             display: inline-block;
