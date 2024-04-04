@@ -21,6 +21,7 @@ export const Container = styled.header`
 export const Logo = styled.div`
     > h1 {
         color: ${({ theme }) => theme.COLORS.PINK};
+        margin: 0;
     }
 `
 
@@ -50,12 +51,12 @@ export const Profile = styled.div`
     display: flex;
     width: 100%;
 
-    h1 {
+    > h1 {
         font-size: 24px;
         color: ${({ theme }) => theme.COLORS.PINK};
     }
 
-    div {
+    > div {
         display: flex;
         align-items: center;
         /* justify-content: flex-end; */

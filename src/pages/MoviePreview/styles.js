@@ -16,6 +16,10 @@ export const Container = styled.div`
                 margin-right: 8px;
             }
         }
+
+        > p {
+            text-align: justify;
+        }
     }
 `
 
@@ -36,3 +40,31 @@ export const TitleNote = styled.div`
         color: ${({ theme }) => theme.COLORS.PINK}
     }
 ` 
+export const InfoTime = styled.div`
+    display: flex;
+    margin-bottom: 40px;
+
+    > img {
+        height: 16px;
+        width: 16px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-right: 8px;
+    }
+
+    > p {
+        display: flex;
+        align-items: end;
+        gap: 8px;
+        font-size: 16px;
+
+        svg {
+            color: ${({ theme }) => theme.COLORS.PINK}
+        }
+    } 
+`
+
+export const ShowTags = styled.div`
+    display: flex;
+    margin-bottom: 40px;
+`
