@@ -33,7 +33,7 @@ export const Search = styled.div`
         width: 100%;
         font-size: 14px;
 
-        padding: 12px;
+        padding: 19px 24px;
         background-color: ${({ theme }) => theme.COLORS.GRAY_400};
 
         border: none;

@@ -9,13 +9,16 @@ export default createGlobalStyle`
     
     body {
         background-color: ${({ theme })=> theme.COLORS.BACKGROUND_900};
-        color: ${({ theme }) => theme.COLORS.WHITE}
+        color: ${({ theme }) => theme.COLORS.WHITE};
+
+        -webkit-font-smoothing: antialiased;
     }
 
-    body, input, button {
+    body, input, button, textarea {
         font-family: "Roboto Slab", serif;
         font-size: 16px;
-        
+        /* Essa configuração aqui é super importante */
+        outline: none;
     }
 
     button, a {

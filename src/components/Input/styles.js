@@ -14,7 +14,7 @@ export const Container = styled.div`
         width: 100%;
         font-size: 14px;
 
-        padding: 12px;
+        padding: 16px;
         background-color: transparent;
 
         border: none;
