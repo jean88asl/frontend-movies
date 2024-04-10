@@ -10,6 +10,11 @@ export const Container = styled.div`
     "header"
     "menu"
     "content";
+
+    > main {
+        overflow-y: auto;
+        margin-bottom: 32px;
+    }
 `
 export const Menu = styled.div`
     grid-area: menu;
@@ -32,7 +37,7 @@ export const Menu = styled.div`
         width: auto;
     }
 `
-export const Content = styled.main`
+export const Content = styled.div`
     grid-area: content;
 
     width: 100%;
@@ -42,6 +47,4 @@ export const Content = styled.main`
     
     display: flex;
     flex-direction: column;
-    overflow-y: auto;
-    overscroll-behavior-y: contain;
 `

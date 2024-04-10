@@ -8,30 +8,44 @@ import { InfoNote } from "../../components/InfoNote"
 export function Home() {
   return (
     <Container>
-      <Header />    
+      <Header />
 
       <Menu>
-        <h2>Filmes assistidos</h2>  
-        <Button 
-            title="Adicionar filme"
-            icon={RiAddFill}
-            >
-        </Button>           
+        <h2>Filmes assistidos</h2>
+        <Button
+          title="Adicionar filme"
+          icon={RiAddFill}
+        >
+        </Button>
       </Menu>
 
-      <Content>
-          <InfoNote 
+      <main>
+        <Content>
+          <InfoNote
             id={1}
             title="Matrix"
             value="O jovem programador Thomas Anderson é atormentado por estranhos pesadelos em que está sempre conectado por cabos a um imenso sistema de computadores do futuro. À medida que o sonho se repete, ele começa a desconfiar da realidade. "
           />
 
-        <InfoNote 
+          <InfoNote
             id={2}
             title="À Procura da Felicidade"
             value="Chris enfrenta sérios problemas financeiros e sua esposa, Linda, decide partir. Agora solteiro, ele precisa cuidar de Christopher, seu filho de cinco anos. Chris tenta usar sua habilidade como vendedor para conseguir um emprego melhor, mas só consegue um estágio não-remunerado."
           />
-      </Content>
-    </Container>       
+
+          <InfoNote
+            id={3}
+            title="À Procura da Felicidade"
+            value="Chris enfrenta sérios problemas financeiros e sua esposa, Linda, decide partir. Agora solteiro, ele precisa cuidar de Christopher, seu filho de cinco anos. Chris tenta usar sua habilidade como vendedor para conseguir um emprego melhor, mas só consegue um estágio não-remunerado."
+          />
+
+          <InfoNote
+            id={4}
+            title="À Procura da Felicidade"
+            value="Chris enfrenta sérios problemas financeiros e sua esposa, Linda, decide partir. Agora solteiro, ele precisa cuidar de Christopher, seu filho de cinco anos. Chris tenta usar sua habilidade como vendedor para conseguir um emprego melhor, mas só consegue um estágio não-remunerado."
+          />
+        </Content>
+      </main>
+    </Container>
   )
 }
