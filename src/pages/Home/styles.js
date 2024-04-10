@@ -42,6 +42,6 @@ export const Content = styled.main`
     
     display: flex;
     flex-direction: column;
-
-    overflow-y: auto;    
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
 `
