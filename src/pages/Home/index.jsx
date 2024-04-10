@@ -15,6 +15,7 @@ export function Home() {
         <Button
           title="Adicionar filme"
           icon={RiAddFill}
+          to="/create"
         >
         </Button>
       </Menu>

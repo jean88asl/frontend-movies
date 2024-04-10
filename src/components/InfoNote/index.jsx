@@ -1,10 +1,14 @@
+/* eslint-disable react/prop-types */
 import { Container } from "./styles";
 import { RiStarLine, RiStarSFill } from "react-icons/ri";
 
-export function InfoNote() {
+import { Tag } from "../Tag";
+
+
+export function InfoNote({title, value, id, ...rest}) {
     return (
-        <Container>
-            <h3>Matrix</h3>
+        <Container {...rest}>
+            <h3>{title}</h3>
 
             <div>
                 <RiStarSFill />
@@ -14,16 +18,17 @@ export function InfoNote() {
                 <RiStarLine />
             </div>
 
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis porro et, ab deserunt nam placeat facere suscipit error aliquid, vel ea. Exercitationem ex molestiae aliquid repellat distinctio asperiores eaque at.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis porro et, ab deserunt nam placeat facere suscipit error aliquid, vel ea. Exercitationem ex molestiae aliquid repellat distinctio asperiores eaque at.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis porro et, ab deserunt nam placeat facere suscipit error aliquid, vel ea. Exercitationem ex molestiae aliquid repellat distinctio asperiores eaque at.
-            </p>
-
-            <div>
-                <a href="/">drama</a>
-                <a href="/">drama</a>
+            <div 
+                className="text"
+                key={id}
+            >
+                <p>
+                    {value.length > 250 ? value.substring(0, 250) + "..." : value}   
+                </p>
             </div>
+
+            <Tag title="Drama" className="tag-home" />
+            <Tag title="Ação" className="tag-home" />
         </Container>
     )
 }

@@ -7,6 +7,11 @@ export const Container = styled.div`
 
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_HEAD};
 
+    .tag-home {
+        background-color: ${({ theme }) => theme.COLORS.BACKGROUND_TAG_HOME};
+        padding: 5px 16px;
+    }
+
     h3 {
         font-size: 24px;
         margin-bottom: 8px;
@@ -21,13 +26,18 @@ export const Container = styled.div`
         }
     }
 
-    p {
-        text-align: justify;
-        margin-bottom: 15px;
-        height: 52px;
-
-        color: ${({ theme }) => theme.COLORS.GRAY_300};;
-
-        overflow-y: hidden;
+    .text {
+        text-overflow: ellipsis;
+        height: 53px;
+        overflow: hidden;
+        
+        margin-bottom: 32px;
+        
+        p {
+            text-align: justify;
+            margin-bottom: 30px;
+        
+            color: ${({ theme }) => theme.COLORS.GRAY_300};        
+        }
     }
 ` 
