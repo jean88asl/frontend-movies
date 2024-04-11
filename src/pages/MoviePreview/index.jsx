@@ -1,4 +1,5 @@
 import { RiStarLine, RiStarSFill, RiArrowLeftLine, RiTimeLine } from "react-icons/ri"
+import { Link } from "react-router-dom"
 
 import { Header } from "../../components/Header"
 import { Tag } from "../../components/Tag"
@@ -11,10 +12,10 @@ export function MoviePreview() {
             <Header />
 
             <main>
-                <a href="">
+                <Link to="/">
                     <RiArrowLeftLine />
                     Voltar
-                </a>
+                </Link>
 
                 <TitleNote>
                     <h1>Matrix</h1>
@@ -29,7 +30,6 @@ export function MoviePreview() {
                 <InfoTime>
                     <img src="https://github.com/jean88asl.png" alt="avatar do usuário" />
                     <p>Por Jeanderson Augusto <RiTimeLine /> 23/05/22 às 08:00</p>
-
                 </InfoTime>
 
                 <ShowTags>

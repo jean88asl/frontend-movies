@@ -24,6 +24,11 @@ export const Container = styled.div`
 
         padding: 16px;
     }
+
+    .delete {
+        background-color: ${({ theme }) => theme.COLORS.BACKGROUND_NOTE_ITEM};
+        color: ${({ theme }) => theme.COLORS.PINK};;
+    }
 `
 
 export const Form = styled.form`

@@ -1,4 +1,5 @@
 import { styled } from "styled-components"
+import { Link } from "react-router-dom"
 
 export const Container = styled.div`
     width: 100%;
@@ -33,10 +34,23 @@ export const Menu = styled.div`
         font-size: 32px;
     }
 
-    > button {
+    > a {
         width: auto;
     }
 `
+
+export const NewNoteMovie = styled(Link)`
+    background-color: ${({ theme }) => theme.COLORS.PINK};
+
+    display: flex;
+    align-items: center;
+    
+    border: none;
+    border-radius: 8px;
+    padding: 12px 32px;
+    color: ${({ theme }) => theme.COLORS.TEXT_BUTTON};
+`
+
 export const Content = styled.div`
     grid-area: content;
 

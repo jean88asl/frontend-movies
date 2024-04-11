@@ -1,5 +1,6 @@
 import { Container, Form } from "./styles"
 import { RiArrowLeftLine } from "react-icons/ri"
+import { Link } from "react-router-dom"
 
 import { Header } from "../../components/Header"
 import { Input } from "../../components/Input"
@@ -17,10 +18,10 @@ export function CreateMovie() {
             <main>
                 <Form>
                     <header>
-                        <a href="/">
+                        <Link to="/">
                             <RiArrowLeftLine />
                             voltar
-                        </a>
+                        </Link>
 
                         <h1>Novo filme</h1>
                     </header>
@@ -48,7 +49,7 @@ export function CreateMovie() {
                     </Section>
 
                     <div>
-                        <Button title="Excluir Filme" />
+                        <Button title="Excluir Filme" className="delete"/>
                         <Button title="Salvar Alterações" />
                     </div>
                 </Form>
