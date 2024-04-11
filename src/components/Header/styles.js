@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { styled } from "styled-components"
 
 export const Container = styled.header`
@@ -18,7 +19,7 @@ export const Container = styled.header`
     }
 `
 
-export const Logo = styled.div`
+export const Logo = styled(Link)`
     > h1 {
         color: ${({ theme }) => theme.COLORS.PINK};
         margin: 0;
