@@ -53,3 +53,10 @@ export const Background = styled.div`
     background: url(${backgroundImg}) no-repeat center center;
     background-size: cover;
 `
+
+// export const Msg = styled.div`
+//     padding: 24px;
+//     text-align: center;
+
+
+// `
