@@ -1,0 +1,68 @@
+/* eslint-disable no-unused-vars */
+import { createContext, useContext, useState, useEffect } from "react"
+
+import { api } from "../service/api"
+
+const AuthContext = createContext({})
+
+// eslint-disable-next-line react/prop-types
+export function AuthProvider({ children }) {
+    const [data, setData] = useState({})
+
+    async function signIn({ email, password }) {
+        try {
+            const response = await api.post("/sessions", { email, password })
+            const { user, token } = response.data
+
+            localStorage.setItem("@movienotes:user", JSON.stringify(user))
+            localStorage.setItem("@movienotes:token", token)
+
+            api.defaults.headers.common['Authorization'] = `Bearer ${token}`
+
+            setData({ user, token })
+
+            console.log(user, token)
+
+        } catch (error) {
+            if (error.response) {
+                alert(error.response.data.message)
+            } else {
+                alert("Não foi possível entrar")
+            }
+        }
+    }
+
+    async function signOut() {
+        localStorage.removeItem("@movienotes:token")
+        localStorage.removeItem("@movienotes:user")
+
+        setData({})
+    }
+
+    useEffect(() => {
+        const token = localStorage.getItem("@movienotes:token")
+        const user = localStorage.getItem("@movienotes:user")
+
+        if (token && user) {
+            api.defaults.headers.common['Authorization'] = `Bearer ${token}`
+
+            setData({
+                token,
+                user: JSON.parse(user)
+            })
+        }
+    }, [])
+
+    return (
+        <AuthContext.Provider value={{ signIn, user: data.user, signOut }}>
+            {children}
+        </AuthContext.Provider>
+    )
+}
+
+export function useAuth() {
+    const context = useContext(AuthContext)
+
+    return context
+}
+
