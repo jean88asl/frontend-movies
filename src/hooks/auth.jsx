@@ -1,5 +1,7 @@
+/* eslint-disable react-refresh/only-export-components */
 /* eslint-disable no-unused-vars */
 import { createContext, useContext, useState, useEffect } from "react"
+// import { Navigate } from "react-router-dom"
 
 import { api } from "../service/api"
 
@@ -21,8 +23,7 @@ export function AuthProvider({ children }) {
 
             setData({ user, token })
 
-            console.log(user, token)
-
+            // console.log(user, token)
         } catch (error) {
             if (error.response) {
                 alert(error.response.data.message)
@@ -37,6 +38,22 @@ export function AuthProvider({ children }) {
         localStorage.removeItem("@movienotes:user")
 
         setData({})
+    }
+
+    async function updatePerfil({ user }) {
+        try {
+            await api.put("/users", user)
+
+            localStorage.setItem("@movienotes:user", JSON.stringify(user))
+            setData({user, token: data.token})
+            alert("Perfil foi atualizado")
+        } catch (error) {
+            if(error.response){
+                alert(error.response.data.message)
+            } else {
+                alert("Não foi possível atualizar o perfil.")
+            }
+        }
     }
 
     useEffect(() => {
@@ -54,7 +71,7 @@ export function AuthProvider({ children }) {
     }, [])
 
     return (
-        <AuthContext.Provider value={{ signIn, user: data.user, signOut }}>
+        <AuthContext.Provider value={{ signIn, user: data.user, signOut, updatePerfil }}>
             {children}
         </AuthContext.Provider>
     )
