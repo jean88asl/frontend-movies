@@ -10,9 +10,11 @@ export const Container = styled.div`
     "header"
     "content";
 
-    overflow-y: hidden;
-    
-    margin-bottom: 60px;
+    main {
+        grid-area: content;
+        overflow-y: auto;
+        height: max-content;
+    }
 
     .tags {
         background-color: ${({ theme }) => theme.COLORS.BACKGROUND_NOTE_ITEM};
