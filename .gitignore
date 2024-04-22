@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+pastas
+CommentRating
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

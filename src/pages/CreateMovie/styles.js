@@ -64,7 +64,20 @@ export const Form = styled.form`
 
     > div {
         display: flex;
+        align-items: center;
         gap: 40px;
-        margin-bottom: 40px;
+        margin-bottom: 16px;
+    }
+
+    .one {
+        display: flex;
+        /* align-items: center; */
+        height: 56px;
+
+        div {
+            display: flex;
+            align-items:start;
+            justify-content: center;
+        }
     }
 `

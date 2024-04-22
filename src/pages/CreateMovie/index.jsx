@@ -3,19 +3,21 @@ import { Container, Form } from "./styles"
 import { RiArrowLeftLine } from "react-icons/ri"
 import { Link, useNavigate } from "react-router-dom"
 
+import { api } from "../../service/api"
+
 import { Header } from "../../components/Header"
 import { Input } from "../../components/Input"
 import { TextArea } from "../../components/TextArea"
 import { Section } from "../../components/Section"
 import { Button } from "../../components/Button"
 import { NoteItem } from "../../components/NoteItem"
-import { api } from "../../service/api"
+import { StarRating } from "../../components/StarRating"
 
 
 export function CreateMovie() {
     const [title, setTitle] = useState("")
     const [description, setDescription] = useState("")
-    const [rating, setRating] = useState("")
+    const [rating, setRating] = useState(0)
 
     const navigate = useNavigate()
 
@@ -26,6 +28,10 @@ export function CreateMovie() {
         setTags(prevState => [...prevState, newTag])
         // state clean
         setNewTag("")
+    }
+
+    function handleRate(value) {
+        setRating(value);
     }
 
     function handleRemoveTag(deleted) {
@@ -75,10 +81,14 @@ export function CreateMovie() {
                             placeholder="Título"
                             onChange={e => setTitle(e.target.value)} 
                         />
-                        <Input 
+                        {/* <Input 
                             placeholder="sua nota(de 0 a 5)" 
                             onChange={e => setRating(e.target.value)}
-                        />
+                        /> */}
+                        <div  className="one">
+                            {/* <label htmlFor="">Nota</label> */}
+                            <StarRating onRate={handleRate}/>                        
+                        </div>
                     </div>
 
                     <TextArea

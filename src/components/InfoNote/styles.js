@@ -7,6 +7,8 @@ export const Container = styled.div`
 
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_HEAD};
 
+    cursor: pointer;
+
     .tag-home {
         background-color: ${({ theme }) => theme.COLORS.BACKGROUND_TAG_HOME};
         padding: 5px 16px;
@@ -17,11 +19,12 @@ export const Container = styled.div`
         margin-bottom: 8px;
     }
 
-    > div {
+    .star {
         display: flex;
-        margin-bottom: 15px;
-
+        margin: 15px 0;
+        
         svg {
+            margin-right: 8px;
             color: ${({ theme }) => theme.COLORS.PINK};
         }
     }
